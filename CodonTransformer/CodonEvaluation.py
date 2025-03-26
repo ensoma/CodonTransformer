@@ -202,11 +202,8 @@ def get_sequence_complexity(dna: str) -> float:
     """
 
     def sum_up_to(x):
-        """Recursive function to calculate the sum of integers from 1 to x."""
-        if x <= 1:
-            return 1
-        else:
-            return x + sum_up_to(x - 1)
+        """Calculate the sum of integers from 1 to x using a mathematical formula."""
+        return (x * (x + 1)) // 2
 
     def f(x):
         """Returns 4 if x is greater than or equal to 4, else returns x."""

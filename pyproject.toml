@@ -7,6 +7,10 @@ license = "Apache-2.0"
 readme = "README.md"
 homepage = "https://github.com/adibvafa/CodonTransformer"
 repository = "https://github.com/adibvafa/CodonTransformer"
+# Add packages configuration to explicitly define the package path
+packages = [
+    { include = "CodonTransformer" }
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: Apache Software License",
@@ -30,7 +34,8 @@ tqdm = "^4.66.2"
 transformers = "^4.40.0"
 CAI-PyPI = "^2.0.1"
 
-[tool.poetry.dev-dependencies]
+# Replace deprecated dev-dependencies with the new format
+[tool.poetry.group.dev.dependencies]
 coverage = "^7.0"
 
 [build-system]
